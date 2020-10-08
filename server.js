@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8080;
 const routes = require("./routes/api");
 
 mongoose.connect(
-  MONGODB_URI ||
+  process.env.MONGODB_URI ||
     "mongodb+srv://melos:melos@cluster0.v0kzk.mongodb.net/bllahbllah?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
